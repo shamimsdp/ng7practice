@@ -28,6 +28,6 @@ before_script:
   provider: pages
   skip_cleanup: true
   github_token: 4f8982208cbe704b73f5c7371a105135ae461e5d # Set in travis-ci.org dashboard
-  local_dir: dist
+  local_dir: dist/ng7mat
   on:
     branch: master
