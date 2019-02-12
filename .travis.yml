@@ -6,34 +6,34 @@ dist: trusty
 
 
 branches:
-  only:
-  - master
+  only: 
+    - master
 
 addons:
-  chrome: stable
+chrome: stable
 
 before_script: 
-  - yarn global add @angular/cli
+    - yarn global add @angular/cli
 
 cache:
-  yarn: true
-  directories:
+yarn: true
+directories: 
     - node_modules
 
-install:
-  - npm install -g yarn
+install: 
+    - npm install -g yarn
 
- script: 
-  - yarn lint
-  - yarn build --base-href /ng7practice/
-  - mv dist/ng7practice/index.html dist/ng7practice/404.html
-  - ng build --prod
-  - ng build -bh "https://shamimsdp.github.io/ng7practice/"
+script: 
+    - yarn lint 
+    - yarn build --base-href /ng7practice/ 
+    - mv dist/ng7practice/index.html dist/ng7practice/404.html 
+    - ng build --prod 
+    - ng build -bh "https://shamimsdp.github.io/ng7practice/"
 
-  deploy:
-  provider: pages
-  skip_cleanup: true
-  keep-history: true
-  github_token: 4f8982208cbe704b73f5c7371a105135ae461e5d # Set in travis-ci.org dashboard
-  local_dir: dist/ng7mat
-  on:
+deploy:
+provider: pages
+skip_cleanup: true
+keep-history: true
+github_token: 4f8982208cbe704b73f5c7371a105135ae461e5d # Set in travis-ci.org dashboard
+local_dir: dist/ng7mat
+on:
