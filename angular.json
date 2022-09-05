@@ -137,5 +137,8 @@
       }
     }
   },
-  "defaultProject": "ng7mat"
+  "defaultProject": "ng7mat",
+  "cli": {
+    "analytics": false
+  }
 }
